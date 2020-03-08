@@ -1,0 +1,48 @@
+<suite thread-count="3" name="Suite" parallel="tests">
+
+
+    <listeners>
+
+        <listener class-name="listeners.ExtentReporterNG" />
+        <listener class-name="listeners.RetryAnalyzer" />
+
+    </listeners>
+    <test name="FirstEnv">
+        <parameter name="browser" value="firefox" />
+        <parameter name="browser_version" value="57.0"/>
+        <parameter name="os" value="Windows" />
+        <parameter name="os_version" value="10" />
+        <classes>
+            <class name="org.example.BrowserTest" />
+        </classes>
+    </test>
+    <test name="SecondEnv">
+        <parameter name="browser" value="Safari" />
+        <parameter name="browser_version" value="9.0" />
+        <parameter name="os" value="OS X" />
+        <parameter name="os_version" value="El Capitan" />
+        <classes>
+            <class name="org.example.BrowserTest" />
+        </classes>
+    </test>
+
+    <test name="FourthEnv">
+        <parameter name="browser" value="firefox" />
+        <parameter name="browser_version" value="57.0" />
+        <parameter name="os" value="OS X" />
+        <parameter name="os_version" value="Mojave" />
+        <classes>
+            <class name="org.example.BrowserTest" />
+        </classes>
+    </test>
+
+    <test name="ThirdEnv">
+        <parameter name="browser" value="Chrome" />
+        <parameter name="browser_version" value="78.0" />
+        <parameter name="os" value="Windows" />
+        <parameter name="os_version" value="8" />
+        <classes>
+            <class name="org.example.BrowserTest" />
+        </classes>
+    </test>
+</suite>
